@@ -1,0 +1,6 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "extends": ["next/core-web-vitals", "plugin:prettier/recommended"]
+}
