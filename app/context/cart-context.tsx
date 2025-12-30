@@ -95,6 +95,7 @@ export default function CartProvider({ children }: { children: React.ReactNode }
 
     const finish = async (payload: { deliveryInfo: DeliveryInfo; newsletter: boolean }) => {
         await api.cart.finish(payload);
+        await clear();
         refetch();
     };
 

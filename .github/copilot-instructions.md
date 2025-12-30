@@ -1,4 +1,4 @@
-# Castor eShop - AI Coding Agent Instructions
+# Élico eShop - AI Coding Agent Instructions
 
 ## Architecture Overview
 

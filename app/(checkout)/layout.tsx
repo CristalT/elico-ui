@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 import CartProvider from '@/context/cart-context';
 import AuthProvider from '@/context/auth-provider';
+import Image from 'next/image';
 
 interface CheckoutLayoutProps {
     children: ReactNode;
@@ -11,7 +12,15 @@ export default function CheckoutLayout({ children }: CheckoutLayoutProps) {
     return (
         <div className="bg-white">
             <header className="border-b text-center">
-                <h1 className="text-5xl font-bold p-8 bg-white">Rey Castor</h1>
+                <h1 className="text-5xl font-bold p-8 bg-white">
+                    <Image
+                        src="/images/logo.png"
+                        alt={process.env.NEXT_PUBLIC_COMPANY_NAME ?? ''}
+                        width={150}
+                        height={150}
+                        className="mx-auto"
+                    />
+                </h1>
             </header>
             <AuthProvider>
                 <CartProvider>

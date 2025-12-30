@@ -7,7 +7,7 @@ import Heading from './ui/heading';
 import ProductActions from './product-actions';
 
 export default function Product(product: ProductProps) {
-    const { id, name, price, image } = product;
+    const { id, name, price, image, description } = product;
     const fav = useFavorites();
     const category = product.categories?.[0]?.name;
     const formatPrice = (price: number) => {
@@ -35,8 +35,8 @@ export default function Product(product: ProductProps) {
                 <Heading className="font-semibold text-gray-900 text-md mb-2 line-clamp-2 leading-tight">
                     {name}
                 </Heading>
+                <p>{description}</p>
                 <div className="flex flex-col gap-4 mt-2">
-                    <p className="text-sm text-gray-500">Código: {id}</p>
                     {price && <p className="text-2xl font-bold text-gray-900 text-right">{formatPrice(price)}</p>}
                 </div>
             </div>
